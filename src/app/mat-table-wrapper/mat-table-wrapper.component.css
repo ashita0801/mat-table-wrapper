@@ -1,0 +1,377 @@
+/* mat-table-wrapper.component.css */
+.table-container {
+  margin: 20px;
+}
+
+.grouped-columns-container {
+  margin-bottom: 20px;
+}
+
+.grouped-columns {
+  min-height: 60px;
+  border: 1px dashed #ccc;
+  padding: 10px;
+  background-color: #f8f8f8;
+  border-radius: 4px;
+}
+
+.grouped-columns h3 {
+  margin-top: 0;
+  color: #666;
+}
+
+.available-columns {
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  background: #f0f0f0;
+  border-radius: 4px;
+  margin-bottom: 20px;
+  min-height: 40px;
+}
+
+.column-box {
+  padding: 10px;
+  border: 1px solid #ccc;
+  background: white;
+  border-radius: 4px;
+  cursor: move;
+  display: flex;
+  align-items: center;
+}
+
+.column-box:hover {
+  background: #f5f5f5;
+  border-color: #999;
+}
+
+table {
+  width: 100%;
+}
+
+.draggable {
+  cursor: move;
+}
+
+.group-header {
+  background-color: #f5f5f5;
+  font-weight: bold;
+  cursor: default !important;
+}
+
+.cdk-drag-preview {
+  box-sizing: border-box;
+  border-radius: 4px;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.available-columns.cdk-drop-list-dragging .column-box:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.grouped-columns.cdk-drop-list-dragging {
+  border: 2px dashed #999;
+  background-color: #f0f0f0;
+}
+
+.drag-handle {
+  cursor: move;
+  color: #666;
+}
+
+.cdk-drop-list-dragging .mat-mdc-row:not(.cdk-drag-placeholder) {
+  transition: transform 250ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.cdk-drag-preview.mat-mdc-row {
+  background-color: white;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+              0 8px 10px 1px rgba(0, 0, 0, 0.14),
+              0 3px 14px 2px rgba(0, 0, 0, 0.12);
+}
+
+mat-chip-set {
+  display: block;
+}
+
+.mat-column-dragHandle {
+  width: 50px;
+  padding: 0 8px;
+}
+
+.placeholder-text {
+  color: #666;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.empty-placeholder {
+  color: #999;
+  text-align: center;
+  padding: 20px;
+  border: 2px dashed #ddd;
+  border-radius: 4px;
+  background-color: #fafafa;
+  margin: 10px 0;
+}
+
+.available-columns-header {
+  margin-top: 20px;
+}
+
+.row-drag-info {
+  background-color: #e3f2fd;
+  padding: 8px 16px;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+.placeholder-text mat-icon {
+  font-size: 18px;
+  width: 18px;
+  height: 18px;
+  opacity: 0.8;
+}
+
+.empty-placeholder {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { background-color: #fafafa; }
+  50% { background-color: #f0f0f0; }
+  100% { background-color: #fafafa; }
+}
+
+.mat-column-select {
+  width: 48px;
+  padding-left: 8px;
+}
+
+.selected-row {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.selection-info {
+  margin-top: 16px;
+  color: #666;
+  font-size: 14px;
+}
+
+tr.group-header .mat-column-select {
+  pointer-events: none;
+}
+
+tr.group-header mat-checkbox {
+  visibility: hidden;
+}
+
+tr.mat-mdc-row:not(.group-header):hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+tr.selected-row {
+  background-color: rgba(33, 150, 243, 0.1);
+}
+
+tr.selected-row:hover {
+  background-color: rgba(33, 150, 243, 0.15);
+}
+
+.mat-column-select mat-checkbox {
+  margin: -4px;
+}
+
+.app-description {
+  padding: 24px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  margin-bottom: 24px;
+}
+
+.app-description h2 {
+  margin: 0 0 16px 0;
+  color: #1976d2;
+}
+
+.features-list {
+  display: flex;
+  gap: 24px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+}
+
+.table-container {
+  padding: 24px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.grouped-columns-container {
+  margin-bottom: 24px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #555;
+  margin-bottom: 12px;
+}
+
+.grouped-columns {
+  min-height: 60px;
+  border: 2px dashed #e0e0e0;
+  padding: 16px;
+  background-color: #fafafa;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.empty-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #999;
+  padding: 24px;
+}
+
+.table-section {
+  background: white;
+  border-radius: 8px;
+}
+
+.table-instructions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: #e3f2fd;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  color: #1976d2;
+}
+
+.table-instructions.with-groups {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+table {
+  width: 100%;
+}
+
+/* Column Styles */
+.mat-column-select {
+  width: 48px;
+  padding: 0 12px;
+}
+
+.mat-column-dragHandle {
+  width: 48px;
+  padding: 0 12px;
+}
+
+/* Header Cell Styles */
+.header-cell-content {
+  position: relative;
+  cursor: move;
+  padding: 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.header-cell-content:hover {
+  background: rgba(0,0,0,0.04);
+}
+
+.drag-preview-text {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  white-space: nowrap;
+  background: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.header-cell-content:hover .drag-preview-text {
+  opacity: 1;
+}
+
+.mat-mdc-row {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.mat-mdc-row:hover:not(.group-header) {
+  background-color: rgba(0,0,0,0.04);
+}
+
+.group-header {
+  background-color: #f5f5f5;
+  font-weight: 500;
+}
+
+.selected-row {
+  background-color: rgba(25,118,210,0.08);
+}
+
+.selected-row:hover {
+  background-color: rgba(25,118,210,0.12);
+}
+
+.drag-handle {
+  color: #999;
+  cursor: move;
+}
+
+.cdk-drag-preview {
+  box-shadow: 0 5px 5px -3px rgba(0,0,0,0.2),
+              0 8px 10px 1px rgba(0,0,0,0.14),
+              0 3px 14px 2px rgba(0,0,0,0.12);
+}
+
+.cdk-drag-placeholder {
+  opacity: 0.3;
+}
+
+.cdk-drag-animating {
+  transition: transform 250ms cubic-bezier(0,0,0.2,1);
+}
+
+.selection-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  color: #1976d2;
+  background: #e3f2fd;
+  border-radius: 4px;
+  margin-top: 16px;
+}

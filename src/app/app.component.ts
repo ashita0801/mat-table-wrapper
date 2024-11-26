@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { MatTableWrapperComponent } from './mat-table-wrapper/mat-table-wrapper.component';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [MatTableWrapperComponent],
+  template: `
+    <app-mat-table-wrapper></app-mat-table-wrapper>
+  `
 })
 export class AppComponent {
   title = 'mat-table-wrapper';
