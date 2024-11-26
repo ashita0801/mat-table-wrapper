@@ -168,7 +168,7 @@ export class MatTableWrapperComponent implements OnInit {
   }
 
   /** Updates the table data based on current groupings. */
-  private updateGrouping() {
+  public updateGrouping() {
     if (this.groupedColumns.length === 0) {
       // Restore original ungrouped data
       this.dataSource.data = [...this.originalData];
@@ -198,7 +198,7 @@ export class MatTableWrapperComponent implements OnInit {
   }
 
   /** Groups the data based on the selected columns. */
-  private groupData(data: TableData[]): Map<string, TableData[]> {
+  public groupData(data: TableData[]): Map<string, TableData[]> {
     const groups = new Map<string, TableData[]>();
 
     data.forEach(item => {
